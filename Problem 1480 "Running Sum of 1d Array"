@@ -1,0 +1,13 @@
+
+//Problem 1480
+//https://leetcode.com/problems/running-sum-of-1d-array/description/?envType=study-plan&id=level-1
+
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        for(int i = 1; i < size(nums); i++){ //Iterates through each index
+          nums.at(i) = nums.at(i) + nums.at(i-1); //Adds current and previous value
+        }
+        return nums;
+    }
+};
